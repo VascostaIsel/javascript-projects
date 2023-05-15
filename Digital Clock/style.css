@@ -1,0 +1,19 @@
+body {
+    background-color: #000000;
+}
+
+.date-container {
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 275px;
+}
+
+.time-container {
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 80px;
+}
