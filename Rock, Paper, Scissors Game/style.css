@@ -4,7 +4,6 @@ body {
 
 .result-image-container {
     font-family: 'Times New Roman';
-    color: black;
     font-size: 100px;
     text-align: center;
     margin-top: 100px;
@@ -47,16 +46,17 @@ body {
     color: black;
     font-size: 40px;
     text-align: left;
-    margin-top: 240px;
+    margin-top: 380px;
 }
 
-.user-hand-image-container {
-    display: inline-block;
+.user-hand-image {
+    margin-inline: 15px;
+    width: 100px;
     rotate: 90deg;
 }
 
-.cpu-hand-image-container {
-    display: inline-block;
-    color: grey;
+.cpu-hand-image {
+    margin-inline: 15px;
+    width: 100px;
     rotate: -90deg;
 }

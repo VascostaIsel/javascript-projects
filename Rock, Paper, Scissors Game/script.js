@@ -27,27 +27,27 @@ function playGame(playerChoice) {
         cpuScore++
         document.getElementById("cpu-score").innerHTML = cpuScore
     }
-
+    document.getElementsByClassName("cpu-hand-image")[0].src = "images/" + randomChoice + ".png"
     document.getElementById("result").innerHTML = result
 }
 
-const rockImg = "fas fa-hand-rock"
-const paperImg = "fas fa-hand-paper"
-const scissorsImg = "fas fa-hand-scissors"
+const rockImg = "images/rock.png"
+const paperImg = "images/paper.png"
+const scissorsImg = "images/scissors.png"
 let lastUserImg = rockImg
 
 function playRock() { 
-    document.getElementsByClassName(lastUserImg)[0].className = rockImg
+    document.getElementsByClassName("user-hand-image")[0].src = rockImg
     lastUserImg = rockImg
     playGame("rock")
 }
 function playPaper() {
-    document.getElementsByClassName(lastUserImg)[0].className = paperImg
+    document.getElementsByClassName("user-hand-image")[0].src = paperImg
     lastUserImg = paperImg
     playGame("paper")
 }
 function playScissors() {
-    document.getElementsByClassName(lastUserImg)[0].className = scissorsImg
+    document.getElementsByClassName("user-hand-image")[0].src = scissorsImg
     lastUserImg = scissorsImg
     playGame("scissors")
 }
