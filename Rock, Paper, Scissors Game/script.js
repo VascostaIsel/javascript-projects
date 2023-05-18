@@ -1,3 +1,6 @@
+let userScore = 0;
+let cpuScore = 0;
+
 function playGame(playerChoice) {
     const plays = ["rock", "paper", "scissors"]
 
@@ -17,13 +20,31 @@ function playGame(playerChoice) {
         (playerChoice === "scissors" && randomChoice === "paper")
     ) {
         result = "You win!"
+        userScore++
+        document.getElementById("user-score").innerHTML = userScore
     } else {
         result = "You lose!"
+        cpuScore++
+        document.getElementById("cpu-score").innerHTML = cpuScore
     }
 
-    console.log(`You played ${playerChoice}`)
-    console.log(`Random played ${randomChoice}`)
-    console.log(result)
+    document.getElementById("result").innerHTML = result
 }
 
-playGame("rock")
+function playRock() { 
+    playGame("rock")
+}
+function playPaper() {
+    playGame("paper")
+}
+function playScissors() {
+    playGame("scissors")
+}
+
+const rockBtn = document.querySelector('.rock-btn');
+const paperBtn = document.querySelector('.paper-btn');
+const scissorsBtn = document.querySelector('.scissors-btn');
+
+rockBtn.addEventListener('click', playRock);
+paperBtn.addEventListener('click', playPaper);
+scissorsBtn.addEventListener('click', playScissors);
